@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Clase01</string>
+    <string name="lbl_titulo">Título</string>
+    <string name="lbl_nombre">Nombre</string>
+    <string name="lbl_apellido">Apellido</string>
+    <string name="lbl_masculino">Masculino</string>
+    <string name="lbl_femenino">Femenino</string>
+    <string name="lbl_mostrar">Mostrar</string>
+    <string name="lbl_atras">Atrás</string>
+</resources>
