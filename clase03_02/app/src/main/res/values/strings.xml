@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">clase03_02</string>
+    <string name="lbl_empezar">Empezar</string>
+    <string name="lbl_usuario">Usuario</string>
+    <string name="lbl_password">Password</string>
+    <string name="lbl_entrar">Entrar</string>
+    <string name="lbl_nuevo">Nuevo</string>
+    <string name="lbl_nombre">Nombre</string>
+    <string name="lbl_confirma_password">Confirma Password</string>
+    <string name="lbl_guardar">Guardar</string>
+</resources>
