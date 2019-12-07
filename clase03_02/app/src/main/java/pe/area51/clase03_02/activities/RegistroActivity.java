@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import pe.area51.clase03_02.R;
+import pe.area51.clase03_02.models.Usuario;
 
 public class RegistroActivity extends AppCompatActivity {
     private TextView usuario, nombre, password, confirmaPassword;
@@ -68,9 +71,17 @@ public class RegistroActivity extends AppCompatActivity {
                     confirmaPassword.setError(null);
                 }
 
-                Intent intent = new Intent(
-                        RegistroActivity.this, ListadoActivity.class);
-                startActivity(intent);
+                Usuario obj = new Usuario();
+                obj.setNombre(nombreValor);
+                obj.setUsuario(usuarioValor);
+                obj.setPassword(passwordValor);
+
+                ListadoActivity.listaUsuarios.add(obj);
+
+                Toast toast = Toast.makeText(RegistroActivity.this,
+                        "Usuario registrado", Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.BOTTOM, 0, 0);
+                toast.show();
                 finish();
             }
         });

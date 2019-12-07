@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,15 +17,13 @@ import java.util.List;
 import pe.area51.clase03_02.R;
 import pe.area51.clase03_02.models.Usuario;
 
-public class ListadoAdapter extends ArrayAdapter {
+public class ListadoAdapter extends BaseAdapter {
     private ArrayList<Usuario> lista;
     private Context context;
 
-    public ListadoAdapter(@NonNull Context context, int resource, @NonNull ArrayList<Usuario> objects) {
-        super(context, resource, objects);
-
+    public ListadoAdapter(ArrayList<Usuario> lista, Context context) {
+        this.lista = lista;
         this.context = context;
-        this.lista = objects;
     }
 
     @Override
@@ -32,15 +31,30 @@ public class ListadoAdapter extends ArrayAdapter {
         return lista.size();
     }
 
+    @Override
+    public Object getItem(int position) {
+        return lista.get(position);
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return 0;
+    }
+
     @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        convertView = LayoutInflater.from(context)
-                .inflate(R.layout.item_usuario, parent, false);
+    public View getView(int position, View view, ViewGroup viewGroup) {
+        view = LayoutInflater.from(context)
+                .inflate(R.layout.item_usuario, viewGroup, false);
 
-        TextView tvNombre = convertView.findViewById(R.id.tvNombre);
-        TextView tvUsuario = convertView.findViewById(R.id.tvUsuario);
+        TextView nombre = view.findViewById(R.id.tvNombre);
+        TextView usuario = view.findViewById(R.id.tvUsuario);
 
-        return  convertView;
+        Usuario obj = (Usuario) getItem(position);
+
+        nombre.setText(obj.getNombre());
+        usuario.setText(obj.getUsuario());
+
+        return view;
     }
 }
