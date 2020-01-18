@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">clase06_01</string>
+    <string name="lbl_nombre">Nombre</string>
+    <string name="lbl_direccion">Dirección</string>
+    <string name="lbl_celular">Celular</string>
+    <string name="lbl_ver_posts">Ver Posts</string>
+    <string name="lbl_ver_albumes">Ver Albumes</string>
+    <string name="lbl_usuario">Usuario</string>
+    <string name="lbl_email">Email</string>
+    <string name="lbl_compania">Compania</string>
+    <string name="lbl_web">Web</string>
+    <string name="lbl_titulo">Título</string>
+    <string name="lbl_cuerpo">Cuerpo</string>
+    <string name="lbl_comentarios">Comentarios</string>
+    <string name="lbl_comentarios_dos_puntos">Comentarios:</string>
+    <string name="call_required">Se necesita permiso de llamada</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="template_nombre"><![CDATA[Nombre: <b>%1$s</b>]]></string>
+    <string name="template_celular"><![CDATA[Celular: <b>%1$s</b>]]></string>
+    <string name="template_direccion"><![CDATA[Dirección: <b>%1$s</b>]]></string>
+</resources>
